@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgoit_react_hw_07_phonebook=self.webpackChunkgoit_react_hw_07_phonebook||[]).push([[460],{1469:function(e,n,o){o.r(n),o.d(n,{default:function(){return s}});var t=o(5700),c=o(3504),r="HomePage_btn__fx-yV",h=o(184),s=function(){return(0,h.jsxs)(t.Z,{children:[(0,h.jsx)("h1",{children:"Phonebook"}),(0,h.jsx)(c.OL,{to:"/contacts",className:r,children:"Try it now!"})]})}}}]);
+//# sourceMappingURL=HomePage.c2baee69.chunk.js.map
