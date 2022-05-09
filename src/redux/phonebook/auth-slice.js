@@ -32,9 +32,6 @@ const authSlice = createSlice({
     [logOut.fulfilled]: () => {
       return initialState;
     },
-    [logOut.rejected]: (_, action) => {
-      console.log(action.payload);
-    },
   },
 });
 

@@ -26,6 +26,4 @@ const rootReducer = combineReducers({
   auth: persistReducer(persistConfig, authSlice.reducer),
 });
 
-// const persistedReducers = persistReducer(persistConfig, rootReducer);
-
 export default rootReducer;

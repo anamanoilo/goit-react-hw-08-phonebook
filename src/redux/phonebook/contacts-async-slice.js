@@ -14,31 +14,23 @@ const contactsReducer = createSlice({
   },
   extraReducers: {
     [getContacts.pending]: (state, _) => {
-      // state.getStatus = "pending";
       state.loading = 'contacts';
       state.errorStatus = '';
     },
     [getContacts.fulfilled]: (state, { payload }) => {
       state.contacts = payload;
-      // state.getStatus = "fulfilled";
       state.loading = '';
     },
     [getContacts.rejected]: (state, _) => {
       state.contacts = [];
-      // state.getStatus = 'rejected';
       state.loading = '';
     },
-    [deleteContact.pending]: (state, { payload }) => {
+    [deleteContact.pending]: (state, _) => {
       state.loading = 'deleteBtn';
       state.errorStatus = '';
     },
     [deleteContact.fulfilled]: (state, _) => {
       state.loading = '';
-      // return {
-      //   ...state,
-      //   status: 'fulfilled',
-      //   contacts:
-      // };
     },
 
     [deleteContact.rejected]: (state, { payload }) => {
@@ -49,9 +41,8 @@ const contactsReducer = createSlice({
       } else {
         toast.error('Oops, something went wrong, please try again');
       }
-      // return { ...state, status: 'rejected' };
     },
-    [addContact.pending]: (state, { payload }) => {
+    [addContact.pending]: (state, _) => {
       state.loading = 'addBtn';
       state.errorStatus = '';
     },
@@ -59,11 +50,6 @@ const contactsReducer = createSlice({
     [addContact.fulfilled]: (state, { payload }) => {
       state.contacts = [payload, ...state.contacts];
       state.loading = '';
-      // return {
-      //   ...state,
-      //   status: 'fulfilled',
-      //   contacts:
-      // };
     },
     [addContact.rejected]: (state, { payload }) => {
       state.loading = '';

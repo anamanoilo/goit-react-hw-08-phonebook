@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { loginContact, registerContact } from 'redux/phonebook/auth-operations';
 import Button from 'components/Button';
 import s from './AuthForm.module.css';
@@ -34,13 +34,13 @@ const AuthForm = ({ type }) => {
     setPassword('');
   };
 
-  const onAuthSubmit = async (e, type) => {
+  const onAuthSubmit = (e, type) => {
     e.preventDefault();
     if (type === 'register') {
-      await dispatch(registerContact({ name, email, password }));
+      dispatch(registerContact({ name, email, password }));
     }
     if (type === 'login') {
-      await dispatch(loginContact({ email, password }));
+      dispatch(loginContact({ email, password }));
     }
     reset();
   };

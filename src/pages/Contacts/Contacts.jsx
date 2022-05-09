@@ -1,5 +1,4 @@
 import { ToastContainer } from 'react-toastify';
-import { useNavigate } from 'react-router-dom';
 import 'react-toastify/dist/ReactToastify.min.css';
 import Container from 'components/Container/Container';
 import Form from 'components/Form';
@@ -7,7 +6,6 @@ import ContactList from 'components/ContactList';
 import Filter from 'components/Filter';
 
 const Contacts = () => {
-  const navigate = useNavigate();
   return (
     <Container>
       <h1>Phonebook</h1>

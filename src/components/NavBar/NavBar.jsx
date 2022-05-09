@@ -12,15 +12,37 @@ const NavBar = () => {
       <Container>
         <div className={s.navContainer}>
           <nav>
-            <NavLink to="/">Home</NavLink>
-            {isLoggedIn ? <NavLink to="/contacts">Contacts</NavLink> : null}
+            <NavLink
+              className={({ isActive }) => (isActive ? s.activeLink : s.link)}
+              to="/"
+            >
+              Home
+            </NavLink>
+            {isLoggedIn ? (
+              <NavLink
+                className={({ isActive }) => (isActive ? s.activeLink : s.link)}
+                to="/contacts"
+              >
+                Contacts
+              </NavLink>
+            ) : null}
           </nav>
           {isLoggedIn ? (
             <UserMenu />
           ) : (
             <div>
-              <NavLink to="/login">Login</NavLink>
-              <NavLink to="/register">Register</NavLink>
+              <NavLink
+                className={({ isActive }) => (isActive ? s.activeLink : s.link)}
+                to="/login"
+              >
+                Login
+              </NavLink>
+              <NavLink
+                className={({ isActive }) => (isActive ? s.activeLink : s.link)}
+                to="/register"
+              >
+                Register
+              </NavLink>
             </div>
           )}
         </div>

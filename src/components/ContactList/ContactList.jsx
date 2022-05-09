@@ -1,9 +1,10 @@
-import { useDispatch, useSelector } from 'react-redux';
-import {
-  getContacts,
-  deleteContact,
-  addContact,
-} from 'redux/phonebook/contacts-operations';
+// import { useEffect } from 'react';
+import { useSelector } from 'react-redux';
+// import {
+//   getContacts,
+//   deleteContact,
+//   addContact,
+// } from 'redux/phonebook/contacts-operations';
 import s from './ContactList.module.css';
 import { useFetchContactsQuery } from 'services/phonebookApi';
 import selectors from 'redux/phonebook/phonebook-selectors';

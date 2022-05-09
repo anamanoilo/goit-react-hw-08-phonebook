@@ -8,3 +8,18 @@
   justify-content: space-between;
   align-items: center;
 }
+
+.link {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+.link:nth-of-type(2n - 1) {
+  margin-right: 10px;
+}
+
+.activeLink {
+  composes: link;
+  color: #4c70e6;
+  text-decoration: underline;
+}
